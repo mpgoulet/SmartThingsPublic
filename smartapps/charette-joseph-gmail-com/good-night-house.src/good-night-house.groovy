@@ -30,7 +30,13 @@ definition(
  */
  )
 preferences {
-	section("When I touch the app turn these lights off…"){
+		section("Section - input - switch off my boner."){
+		input "switchesoff", "capability.switch", multiple: false, required:true
+	}
+		section("Ice cream boner…"){
+		input "switchesoff", "capability.switch", multiple: true, required:true
+	}
+	section("Ice cream boner…"){
 		input "switchesoff", "capability.switch", multiple: true, required:true
 	}
     section("When I touch the app turn these lights on…"){
@@ -50,7 +56,7 @@ preferences {
 
 def installed()
 {
-	log.debug "Installed with settings: ${settings}"
+	log.debug "Installed with these very good very big the biggest settings: ${settings}"
 	log.debug "Current mode = ${location.mode}"
 	subscribe(app, appTouch)
 }
